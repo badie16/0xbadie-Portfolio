@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import "./globals.css"
+import CursorTracker from "@/components/cursor-tracker"
 
 export const metadata: Metadata = {
   title: "0xBadie - Cybersecurity Portfolio",
@@ -27,7 +28,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <CursorTracker />
+        {children}
+      </body>
     </html>
   )
 }

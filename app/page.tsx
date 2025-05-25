@@ -478,7 +478,7 @@ export default function Portfolio() {
       <footer className="border-t border-green-400/20 py-8 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-gray-400">
-            © 2024 <span className="text-cyan-400">0x</span>
+            © {new Date().getFullYear()} <span className="text-cyan-400">0x</span>
             <span className="text-green-400">Badie</span>. Tous droits réservés. | Fait avec ❤️ et beaucoup de ☕
           </p>
         </div>

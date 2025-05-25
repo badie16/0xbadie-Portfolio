@@ -43,23 +43,19 @@ html {
 }
 
 /* Custom cursor tracking */
-body {
-  cursor: none;
-}
-
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
+  top: var(--mouse-y);
+  left: var(--mouse-x);
   width: 20px;
   height: 20px;
   background: radial-gradient(circle, rgba(34, 197, 94, 0.8) 0%, rgba(34, 197, 94, 0.2) 50%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: all 0.1s ease;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
 }
 
 /* Glow effects */
